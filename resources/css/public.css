@@ -1,0 +1,12 @@
+/* Invesmal Public Pages - Bundled CSS for better performance */
+
+/* Global & Theme */
+@import './global/theme.css';
+
+/* Public Shared Components */
+@import './components/public-shared.css';
+@import './components/navbar.css';
+@import './components/footer.css';
+
+/* Landing Page */
+@import './public/landing.css';
