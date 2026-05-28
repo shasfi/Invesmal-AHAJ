@@ -1,1 +1,0 @@
-document.addEventListener("DOMContentLoaded",()=>{document.querySelectorAll("[data-animate]").forEach((a,e)=>{a.style.animationDelay=`${Math.min(e*.06,.4)}s`,a.classList.add("invesmal-animate-in")})});

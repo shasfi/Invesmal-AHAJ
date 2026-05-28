@@ -1,45 +1,24 @@
-/* Invesmal Dashboard - Bundled CSS for better performance */
-
-/* Global & Theme */
 @import './global/theme.css';
-
-/* Dashboard Shared Components */
 @import './components/dashboard-shared.css';
 @import './components/forms-extended.css';
-@import './components/pitch-buttons.css';
+@import './components/public-shared.css';
+@import './components/navbar.css';
 @import './components/footer.css';
-
-/* Dashboard Partials */
+@import './components/pitch-buttons.css';
 @import './dashboard/dashboard-partials.css';
 
-/* Auth */
 @import './auth/login.css';
-
-/* Admin */
 @import './admin/admin-dashboard.css';
 @import './admin/activity-logs.css';
 @import './admin/verification.css';
-
-/* Users */
 @import './users/users-list.css';
-
-/* Conversations */
 @import './conversations/conversations.css';
 @import './conversations/chat.css';
-
-/* Investments */
 @import './investments/investments.css';
-
-/* Documents */
 @import './documents/documents.css';
-
-/* Pitch Decks */
 @import './pitch_decks/pitch-decks.css';
-
-/* Meetings */
 @import './meetings/meetings.css';
-
-/* Startups */
 @import './startups/discovery.css';
 @import './startups/startup-cards.css';
 @import './startups/show.css';
+@import './public/landing.css';
