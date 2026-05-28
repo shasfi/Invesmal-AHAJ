@@ -1,0 +1,75 @@
+/* Pitch-deck button variants (shared with AI sentiment pages) */
+
+.pp-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.65rem 1.25rem;
+    border-radius: var(--radius-lg);
+    font-weight: 600;
+    font-size: 0.875rem;
+    cursor: pointer;
+    transition: all var(--transition);
+    text-decoration: none;
+    border: none;
+    font-family: var(--font-sans);
+}
+.pp-btn--primary {
+    background: linear-gradient(135deg, var(--primary), var(--primary-light));
+    color: var(--text);
+}
+.pp-btn--primary:hover {
+    transform: translateY(-2px);
+    box-shadow: var(--glow-primary);
+}
+.pp-btn--accent {
+    background: linear-gradient(135deg, var(--accent-soft), var(--primary));
+    color: var(--text);
+}
+.pp-btn--accent:hover {
+    transform: translateY(-2px);
+    box-shadow: var(--glow-accent);
+}
+.pp-btn--ghost {
+    background: transparent;
+    border: 1px solid var(--border);
+    color: var(--text);
+}
+.pp-btn--ghost:hover {
+    border-color: var(--accent);
+    color: var(--accent);
+}
+.pp-btn--danger {
+    background: transparent;
+    border: 1px solid var(--danger);
+    color: var(--danger);
+}
+.pp-btn--danger:hover {
+    background: var(--danger);
+    color: white;
+}
+.pp-btn--sm {
+    padding: 0.4rem 0.85rem;
+    font-size: 0.8rem;
+}
+.pp-btn--large {
+    padding: 0.85rem 2rem;
+    font-size: 1rem;
+}
+.pp-btn--block {
+    width: 100%;
+    justify-content: center;
+}
+
+.pp-back-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.4rem;
+    color: var(--muted);
+    font-size: 0.85rem;
+    text-decoration: none;
+    transition: color var(--transition);
+}
+.pp-back-link:hover {
+    color: var(--accent);
+}

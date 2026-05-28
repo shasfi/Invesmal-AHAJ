@@ -1,0 +1,6 @@
+- [x] Phase 1: Extract inline styles to dashboard.css + add new CSS sections
+- [x] Phase 2: Redesign startups.index with hero, live search, featured, trending, investor picks, industry sections
+- [x] Phase 3: Enhance startups.show with alternating story layouts, bento metrics, scroll parallax
+- [x] Phase 4: Add scroll-reveal animations and micro-interactions
+- [x] Phase 5: Update StartupController discover() and verify search API endpoint
+- [x] Final pass: responsive design check and visual consistency audit

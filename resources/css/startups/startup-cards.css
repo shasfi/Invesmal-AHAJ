@@ -1,0 +1,169 @@
+﻿/* ================================================================
+   STARTUP CARDS V2 â€” FLOATING GLASS, VARIANTS, ANIMATIONS
+   ================================================================ */
+
+.startup-card-v2 {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    background: var(--surface-strong);
+    border: 1px solid var(--border);
+    border-radius: var(--radius-xl);
+    padding: 1.5rem;
+    text-decoration: none;
+    color: inherit;
+    transition: all var(--transition-smooth);
+    backdrop-filter: blur(14px);
+    overflow: hidden;
+}
+.startup-card-v2:hover {
+    transform: translateY(-4px);
+    border-color: var(--border-strong);
+    box-shadow: var(--shadow-lg);
+}
+.startup-card-v2:hover .card-v2-glow {
+    opacity: 1;
+}
+.card-v2-glow {
+    position: absolute;
+    inset: 0;
+    background: radial-gradient(ellipse at 50% 0%, rgba(24,67,67,0.12), transparent 70%);
+    opacity: 0;
+    transition: opacity var(--transition-smooth);
+    pointer-events: none;
+}
+.card-v2-top {
+    display: flex;
+    align-items: center;
+    gap: 0.85rem;
+    margin-bottom: 1rem;
+    position: relative;
+    z-index: 1;
+}
+.card-v2-logo {
+    width: 50px; height: 50px;
+    border-radius: var(--radius-md);
+    object-fit: cover;
+    flex-shrink: 0;
+    border: 1px solid var(--border);
+    background: var(--bg-tertiary);
+    transition: transform var(--transition-smooth);
+}
+.startup-card-v2:hover .card-v2-logo { transform: scale(1.05); }
+.card-v2-meta { min-width: 0; flex: 1; }
+.card-v2-name {
+    display: block;
+    font-size: 1rem;
+    font-weight: 700;
+    color: var(--text);
+    letter-spacing: -0.01em;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    margin-bottom: 0.35rem;
+}
+.card-v2-badges {
+    display: flex;
+    gap: 0.4rem;
+    align-items: center;
+    flex-wrap: wrap;
+}
+.card-v2-badge {
+    font-size: 0.7rem;
+    padding: 0.2rem 0.55rem;
+    border-radius: var(--radius-full);
+    background: rgba(127,163,154,0.15);
+    color: var(--accent-soft);
+    font-weight: 500;
+}
+.card-v2-desc {
+    font-size: 0.875rem;
+    color: var(--text-secondary);
+    line-height: 1.6;
+    margin-bottom: 1.25rem;
+    position: relative;
+    z-index: 1;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+}
+.card-v2-funding { margin-top: auto; position: relative; z-index: 1; }
+.card-v2-funding-top {
+    display: flex;
+    align-items: baseline;
+    gap: 0.5rem;
+    margin-bottom: 0.6rem;
+}
+.card-v2-raised { font-size: 1.2rem; font-weight: 700; color: var(--text); }
+.card-v2-goal { font-size: 0.78rem; color: var(--text-muted); }
+.card-v2-progress-wrap {
+    height: 6px;
+    background: rgba(255,255,255,0.05);
+    border-radius: 99px;
+    overflow: hidden;
+    margin-bottom: 0.6rem;
+}
+.card-v2-progress {
+    height: 100%;
+    background: linear-gradient(90deg, var(--primary), var(--accent-soft));
+    border-radius: 99px;
+    transition: width 1.2s ease;
+}
+.card-v2-funding-stats {
+    display: flex;
+    gap: 1rem;
+    font-size: 0.78rem;
+    color: var(--text-muted);
+    flex-wrap: wrap;
+}
+.card-v2-bottom {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 1rem;
+    padding-top: 1rem;
+    border-top: 1px solid var(--border);
+    position: relative;
+    z-index: 1;
+}
+.card-v2-industry {
+    font-size: 0.78rem;
+    color: var(--text-secondary);
+    display: flex;
+    align-items: center;
+    gap: 0.35rem;
+}
+.card-v2-cta {
+    font-size: 0.8rem;
+    font-weight: 600;
+    color: var(--accent-soft);
+    display: flex;
+    align-items: center;
+    gap: 0.35rem;
+    transition: color var(--transition);
+}
+.startup-card-v2:hover .card-v2-cta { color: var(--accent); }
+
+/* Card Variant: Featured (larger, with accent strip) */
+.startup-card-v2.featured {
+    grid-column: span 2;
+    border-left: 3px solid var(--accent-warm);
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1.5rem;
+    align-items: center;
+}
+.startup-card-v2.featured .card-v2-desc { -webkit-line-clamp: 3; }
+
+/* Card Variant: Horizontal (compact row) */
+.startup-card-v2.horizontal {
+    flex-direction: row;
+    align-items: center;
+    gap: 1.25rem;
+    padding: 1.25rem 1.5rem;
+}
+.startup-card-v2.horizontal .card-v2-top { margin-bottom: 0; flex-shrink: 0; min-width: 200px; }
+.startup-card-v2.horizontal .card-v2-desc { margin-bottom: 0; flex: 1; -webkit-line-clamp: 1; }
+.startup-card-v2.horizontal .card-v2-bottom { margin-top: 0; padding-top: 0; border-top: none; flex-shrink: 0; }
+

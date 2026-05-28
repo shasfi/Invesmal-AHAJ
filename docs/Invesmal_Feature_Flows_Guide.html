@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>Invesmal — Feature Flows & Demo Guide</title>
+    <style>
+        @page { margin: 2cm; }
+        body { font-family: 'Segoe UI', Arial, sans-serif; color: #1a1a1a; line-height: 1.55; max-width: 900px; margin: 0 auto; padding: 40px 32px; }
+        h1 { color: #184343; border-bottom: 3px solid #184343; padding-bottom: 12px; font-size: 28px; }
+        h2 { color: #236b6b; margin-top: 32px; font-size: 20px; page-break-after: avoid; }
+        h3 { color: #567256; font-size: 16px; margin-top: 20px; }
+        .meta { color: #666; font-size: 14px; margin-bottom: 24px; }
+        .box { background: #f4f7f6; border-left: 4px solid #184343; padding: 14px 18px; margin: 16px 0; }
+        table { width: 100%; border-collapse: collapse; margin: 12px 0 20px; font-size: 13px; }
+        th, td { border: 1px solid #ccc; padding: 8px 10px; text-align: left; }
+        th { background: #184343; color: #fff; }
+        ol.steps { padding-left: 22px; }
+        ol.steps li { margin-bottom: 8px; }
+        .urdu { font-style: italic; color: #444; }
+        .page-break { page-break-before: always; }
+        code { background: #eee; padding: 2px 6px; border-radius: 4px; font-size: 12px; }
+        @media print { body { padding: 0; } .no-print { display: none; } }
+    </style>
+</head>
+<body>
+
+<p class="no-print" style="background:#fff3cd;padding:12px;border-radius:8px;">
+    <strong>PDF banane ke liye:</strong> Browser mein <code>Ctrl+P</code> → Destination: <strong>Save as PDF</strong> → Save
+</p>
+
+<h1>Invesmal — Complete Feature Flow Guide</h1>
+<p class="meta">
+    <strong>Project:</strong> Multi-role Startup Investment Platform (FYP)<br>
+    <strong>Stack:</strong> Laravel 12 · Blade · Alpine.js · OpenAI (optional)<br>
+    <strong>Demo password (sab accounts):</strong> <code>password</code>
+</p>
+
+<div class="box">
+    <strong>Demo data load karne ke liye (terminal):</strong><br>
+    <code>cd invesmal</code><br>
+    <code>php artisan db:seed --class=FeatureDemoSeeder</code><br>
+    Har feature mein <strong>10+ records</strong> add ho jayenge.
+</div>
+
+<h2>1. Demo Login Accounts (10 Users)</h2>
+<table>
+    <tr><th>Email</th><th>Role</th><th>Use For</th></tr>
+    <tr><td>admin@invesmal.com</td><td>Admin</td><td>Verification, moderation, reports</td></tr>
+    <tr><td>ahmed@invesmal.com</td><td>Founder</td><td>Startups, pitch decks, investments receive</td></tr>
+    <tr><td>fatima@invesmal.com</td><td>Founder</td><td>Multiple startups</td></tr>
+    <tr><td>usman@invesmal.com</td><td>Founder</td><td>Demo founder 3</td></tr>
+    <tr><td>hira@invesmal.com</td><td>Founder</td><td>Demo founder 4</td></tr>
+    <tr><td>zain@invesmal.com</td><td>Investor</td><td>Discover, invest, meetings</td></tr>
+    <tr><td>sara@invesmal.com</td><td>Investor</td><td>Investments list</td></tr>
+    <tr><td>omar@invesmal.com</td><td>Investor</td><td>Demo investor 3</td></tr>
+    <tr><td>bilal@invesmal.com</td><td>Mentor</td><td>Meetings, messages</td></tr>
+    <tr><td>ayesha@invesmal.com</td><td>Mentor</td><td>Mentorship flows</td></tr>
+</table>
+
+<h2>2. Module 3.1 — User Management</h2>
+<p class="urdu">Users register karte hain, login karte hain, profile update karte hain.</p>
+<ol class="steps">
+    <li>Public URL: <code>/register</code> — name, email, password, role select (Founder / Investor / Mentor)</li>
+    <li>System user create karta hai → auto login → <code>/dashboard</code></li>
+    <li>Profile dekhne ke liye: sidebar → profile link ya <code>/users/{id}/profile</code></li>
+    <li>Profile edit: <code>/users/{id}/edit</code> — avatar, bio, university</li>
+    <li>Admin user verify karta hai: <code>/admin/verification</code> → Approve user</li>
+    <li>Logout: POST <code>/logout</code></li>
+</ol>
+<p><strong>Demo records:</strong> 10 users seeded</p>
+
+<h2>3. Module 3.2 — Startup Management</h2>
+<ol class="steps">
+    <li>Founder login → <code>/startups</code> (My Startups)</li>
+    <li>Create: <code>/startups/create</code> — name, description, stage (idea/mvp/funded), industry, funding goal, logo</li>
+    <li>Save → public page <code>/startups/{id}</code></li>
+    <li>Progress score aur funding % automatically calculate hota hai</li>
+    <li>Public discover: <code>/discover</code> — search, filter stage/industry</li>
+    <li>Admin verify: <code>/admin/verification</code> → Approve startup</li>
+</ol>
+<p><strong>Demo records:</strong> 12+ startups</p>
+
+<div class="page-break"></div>
+
+<h2>4. Module 3.3 — Investment & Opportunity</h2>
+<ol class="steps">
+    <li>Investor <code>/discover</code> se startup dekhta hai</li>
+    <li>Invest click → <code>/investments/create</code> — amount + message</li>
+    <li>Status = <strong>pending</strong> → event <code>InvestmentRequested</code></li>
+    <li>Founder <code>/investments</code> par requests dekhta hai</li>
+    <li>Founder <code>/investments/{id}</code> → Approve ya Reject</li>
+    <li>Investor ko notification + email (preferences on hon to)</li>
+</ol>
+<p><strong>Demo records:</strong> 12+ investments (pending/approved/rejected mix)</p>
+
+<h2>5. Module 3.4 — Document Management</h2>
+<ol class="steps">
+    <li>Founder → <code>/documents</code></li>
+    <li>Upload form: name, type (pitch deck / business plan), optional startup, file</li>
+    <li>Same startup + type par dubara upload → <strong>version 2, 3…</strong> auto increment</li>
+    <li>Download: role-based (owner, founder, verified startup for investors)</li>
+    <li>Delete: owner ya admin</li>
+</ol>
+<p><strong>Demo records:</strong> 12+ documents with versions</p>
+
+<h2>6. Module 3.5 — Communication & Meetings</h2>
+<h3>Messages</h3>
+<ol class="steps">
+    <li><code>/conversations</code> — list</li>
+    <li>New chat: participant select → conversation create</li>
+    <li><code>/conversations/{id}</code> — messages; har 5 sec polling se naye messages</li>
+    <li>Message send → <code>MessageSent</code> event → notifications + sentiment job</li>
+</ol>
+<h3>Meetings</h3>
+<ol class="steps">
+    <li><code>/meetings/create</code> — invitee, title, date/time, location, notes</li>
+    <li>Save → invitee ko notification</li>
+    <li>Invitee <code>/meetings/{id}</code> → Accept / Decline</li>
+</ol>
+<p><strong>Demo records:</strong> 12+ meetings, 12+ conversations, 24+ messages</p>
+
+<h2>7. Module 3.6 — Administration</h2>
+<ol class="steps">
+    <li>Admin login → <code>/admin/verification</code> — pending users & startups</li>
+    <li><code>/admin/moderation</code> — flag / unflag startups</li>
+    <li><code>/admin/monitoring</code> — platform stats</li>
+    <li><code>/admin/activity-logs</code> — audit trail (12+ logs seeded)</li>
+</ol>
+
+<h2>8. Module 3.7 — Notifications</h2>
+<ol class="steps">
+    <li>In-app: bell icon → <code>/notifications</code></li>
+    <li>Events: investment, meeting, message, startup verified → auto create</li>
+    <li>Email: <code>SendEmailNotification</code> listener (mail configured hon to)</li>
+    <li>Preferences: gear icon → <code>/notification-preferences</code> — email/in-app toggles</li>
+</ol>
+<p><strong>Demo records:</strong> 12+ notifications</p>
+
+<div class="page-break"></div>
+
+<h2>9. Module 3.8 — Reporting & Dashboard</h2>
+<ol class="steps">
+    <li>Admin → <code>/reports</code> — full platform stats</li>
+    <li>Investor → <code>/reports</code> — investor activity summary</li>
+    <li>Founder → <code>/reports</code> — startup performance</li>
+    <li>Export CSV: <code>/reports/export-csv</code></li>
+    <li>Export report HTML (print to PDF): <code>/reports/export-pdf</code></li>
+</ol>
+
+<h2>10. Module 3.9 — AI Analytics & Insights</h2>
+<ol class="steps">
+    <li>Login (any role except guest) → <code>/ai/insights</code></li>
+    <li>Dekho: engagement ranking, industry trends, competitive comparison (2 startups same industry)</li>
+    <li>AI recommendations (OpenAI key ho to smart; warna default tips)</li>
+</ol>
+
+<h2>11. Module 3.10 — Sentiment Analysis</h2>
+<ol class="steps">
+    <li><code>/ai/sentiment</code> — apni conversations list + sentiment badge</li>
+    <li>Conversation select → <code>/ai/sentiment/{id}</code></li>
+    <li>Score, label (Positive/Neutral/Negative), breakdown %</li>
+    <li>Refresh analysis: link with <code>?refresh=1</code></li>
+    <li>Background: <code>ProcessSentimentJob</code> on new messages</li>
+</ol>
+<p><strong>Demo records:</strong> conversations mein pre-filled sentiment</p>
+
+<h2>12. Module 3.11 — AI Pitch Assistance</h2>
+<ol class="steps">
+    <li>Founder → <code>/pitch-decks</code></li>
+    <li>Generate: <code>/pitch-decks/generate</code> — title + startup description → AI deck</li>
+    <li>Edit sections → Save → status <strong>final</strong></li>
+    <li>Analyze: <code>/pitch-decks/{id}/analyze</code> → <code>/pitch-decks/{id}/analysis</code></li>
+    <li>Upload PDF: <code>/pitch-decks/upload</code></li>
+    <li>Startup form mein pitch deck attach → public startup profile par dikhe</li>
+</ol>
+<p><strong>Demo records:</strong> 12+ pitch decks (draft/generated/analyzed/final)</p>
+
+<h2>13. End-to-End Demo Script (Viva / Presentation)</h2>
+<ol class="steps">
+    <li><strong>Step 1:</strong> Public landing <code>/</code> → search startup</li>
+    <li><strong>Step 2:</strong> Investor login → Discover → investment request</li>
+    <li><strong>Step 3:</strong> Founder login → Investments → approve</li>
+    <li><strong>Step 4:</strong> Meeting schedule + accept</li>
+    <li><strong>Step 5:</strong> Messages bhejo → Sentiment check karo</li>
+    <li><strong>Step 6:</strong> Pitch deck generate/analyze</li>
+    <li><strong>Step 7:</strong> AI Insights dashboard</li>
+    <li><strong>Step 8:</strong> Admin verification + activity logs</li>
+    <li><strong>Step 9:</strong> Reports export</li>
+</ol>
+
+<div class="box">
+    <strong>Record counts after seed (minimum):</strong><br>
+    Users: 10 · Startups: 12 · Investments: 12 · Meetings: 12 · Documents: 12 ·<br>
+    Pitch Decks: 12 · Conversations: 12 · Messages: 24 · Notifications: 12 · Activity Logs: 12
+</div>
+
+<p class="meta" style="margin-top:40px;">
+    Invesmal FYP Documentation · Generated for evaluation · File: docs/Invesmal_Feature_Flows_Guide.html
+</p>
+
+</body>
+</html>
