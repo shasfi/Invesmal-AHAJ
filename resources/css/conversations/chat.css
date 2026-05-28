@@ -1,0 +1,18 @@
+﻿.chat-page { display: flex; flex-direction: column; height: calc(100vh - 80px); max-width: 900px; margin: 0 auto; padding: 1rem 1.5rem; }
+.chat-header-bar { display: flex; align-items: center; gap: 0.75rem; padding: 0.75rem 1rem; background: var(--surface-strong); border: 1px solid var(--border); border-radius: var(--radius-lg) var(--radius-lg) 0 0; }
+.chat-title { font-size: 1.1rem; font-weight: 700; margin: 0; flex: 1; }
+.chat-messages { flex: 1; overflow-y: auto; padding: 1rem; background: rgba(0,0,0,0.2); border-left: 1px solid var(--border); border-right: 1px solid var(--border); display: flex; flex-direction: column; justify-content: flex-end; gap: 0.75rem; min-height: 320px; }
+.message-row { display: flex; gap: 0.5rem; max-width: 85%; }
+.message-row.sent { align-self: flex-end; flex-direction: row-reverse; margin-left: auto; }
+.message-row.received { align-self: flex-start; }
+.message-glass { padding: 0.65rem 1rem; border-radius: var(--radius-md); font-size: 0.9rem; }
+.message-sent { background: var(--primary); color: var(--text); border-bottom-right-radius: 4px; }
+.message-received { background: var(--surface-strong); border: 1px solid var(--border); border-bottom-left-radius: 4px; }
+.message-body { margin: 0 0 0.25rem; line-height: 1.5; white-space: pre-wrap; word-break: break-word; }
+.message-time { font-size: 0.7rem; opacity: 0.75; }
+.avatar-tiny { width: 28px; height: 28px; border-radius: 50%; background: var(--secondary); display: flex; align-items: center; justify-content: center; font-size: 0.65rem; font-weight: 700; flex-shrink: 0; }
+.chat-input-bar { display: flex; gap: 0.5rem; padding: 0.75rem; background: var(--surface-strong); border: 1px solid var(--border); border-radius: 0 0 var(--radius-lg) var(--radius-lg); align-items: flex-end; }
+.chat-input-bar textarea { flex: 1; resize: none; min-height: 44px; max-height: 120px; padding: 0.65rem 1rem; background: var(--bg-elevated); border: 1px solid var(--border); border-radius: var(--radius-md); color: var(--text); font-family: inherit; font-size: 0.9rem; }
+.chat-input-bar button { width: 44px; height: 44px; border: none; border-radius: var(--radius-md); background: var(--primary); color: var(--text); cursor: pointer; flex-shrink: 0; }
+.chat-input-bar button:disabled { opacity: 0.5; cursor: not-allowed; }
+.empty-chat { text-align: center; color: var(--muted); padding: 2rem; margin: auto; }

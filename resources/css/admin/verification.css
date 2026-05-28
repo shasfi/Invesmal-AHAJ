@@ -1,0 +1,139 @@
+﻿.verification-section {
+        background: var(--surface-strong);
+        border: 1px solid var(--border);
+        border-radius: var(--radius-xl);
+        padding: 2rem;
+        margin-bottom: 2rem;
+        animation: invesmal-fade-up 0.6s ease-out both;
+    }
+    .verification-section:nth-child(2) { animation-delay: 0.15s; }
+    .verification-header {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        margin-bottom: 1.5rem;
+        padding-bottom: 1rem;
+        border-bottom: 1px solid var(--border);
+    }
+    .verification-title {
+        font-size: 1.25rem;
+        font-weight: 700;
+        color: var(--text);
+        display: flex;
+        align-items: center;
+        gap: 0.75rem;
+    }
+    .verification-count {
+        background: linear-gradient(135deg, var(--primary), var(--primary-light));
+        color: var(--text);
+        padding: 0.35rem 0.875rem;
+        border-radius: var(--radius-full);
+        font-size: 0.875rem;
+        font-weight: 600;
+    }
+    .verification-table {
+        width: 100%;
+        border-collapse: collapse;
+    }
+    .verification-table th {
+        padding: 1rem 1.25rem;
+        text-align: left;
+        font-size: 0.75rem;
+        font-weight: 600;
+        color: var(--text-muted);
+        text-transform: uppercase;
+        letter-spacing: 0.05em;
+        border-bottom: 2px solid var(--border);
+        background: var(--bg-tertiary);
+    }
+    .verification-table td {
+        padding: 1rem 1.25rem;
+        border-bottom: 1px solid var(--border);
+        font-size: 0.875rem;
+    }
+    .verification-table tr:hover td {
+        background: var(--bg-tertiary);
+    }
+    .verification-user-cell {
+        display: flex;
+        align-items: center;
+        gap: 0.875rem;
+    }
+    .verification-avatar {
+        width: 40px;
+        height: 40px;
+        border-radius: 50%;
+        background: linear-gradient(135deg, var(--primary), var(--accent-soft));
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 0.875rem;
+        font-weight: 600;
+        color: var(--text);
+        flex-shrink: 0;
+    }
+    .verification-name {
+        font-weight: 600;
+        color: var(--text);
+    }
+    .verification-email {
+        font-size: 0.8125rem;
+        color: var(--text-secondary);
+    }
+    .verification-badge {
+        display: inline-flex;
+        align-items: center;
+        padding: 0.35rem 0.75rem;
+        border-radius: var(--radius-md);
+        font-size: 0.75rem;
+        font-weight: 600;
+    }
+    .verification-badge-role {
+        background: rgba(127, 163, 154, 0.15);
+        color: var(--accent-soft);
+        border: 1px solid rgba(127, 163, 154, 0.25);
+    }
+    .verification-badge-stage {
+        background: rgba(24, 67, 67, 0.15);
+        color: var(--primary);
+        border: 1px solid rgba(24, 67, 67, 0.25);
+    }
+    .verification-actions {
+        display: flex;
+        gap: 0.5rem;
+    }
+    .verification-btn {
+        padding: 0.5rem 1rem;
+        border-radius: var(--radius-md);
+        font-size: 0.8125rem;
+        font-weight: 600;
+        cursor: pointer;
+        transition: all 0.2s ease;
+        border: none;
+    }
+    .verification-btn-approve {
+        background: linear-gradient(135deg, var(--success), #5c8f6a);
+        color: white;
+    }
+    .verification-btn-approve:hover {
+        transform: translateY(-1px);
+        box-shadow: 0 4px 12px rgba(92, 143, 106, 0.3);
+    }
+    .verification-btn-reject {
+        background: linear-gradient(135deg, var(--danger), #b46a6a);
+        color: white;
+    }
+    .verification-btn-reject:hover {
+        transform: translateY(-1px);
+        box-shadow: 0 4px 12px rgba(180, 106, 106, 0.3);
+    }
+    .verification-empty {
+        text-align: center;
+        padding: 3rem 2rem;
+        color: var(--text-muted);
+    }
+    .verification-empty-icon {
+        font-size: 3rem;
+        margin-bottom: 1rem;
+        opacity: 0.5;
+    }

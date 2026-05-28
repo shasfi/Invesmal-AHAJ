@@ -1,0 +1,83 @@
+﻿.pub-nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 100;
+    background: rgba(10,14,12,0.75);
+    backdrop-filter: blur(20px);
+    border-bottom: 1px solid var(--border);
+    padding: 0.75rem 2rem;
+}
+.pub-nav-inner {
+    max-width: 1280px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.pub-nav-brand {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    text-decoration: none;
+}
+.pub-nav-brand-icon {
+    width: 36px;
+    height: 36px;
+    background: linear-gradient(45deg, var(--primary), var(--accent-soft));
+    border-radius: var(--radius-sm);
+}
+.pub-nav-brand-name {
+    font-size: 1.25rem;
+    font-weight: 700;
+    color: var(--text);
+}
+.pub-nav-links {
+    display: flex;
+    align-items: center;
+    gap: 1.25rem;
+}
+.pub-nav-link {
+    font-size: 0.9rem;
+    font-weight: 500;
+    color: var(--muted);
+    transition: color var(--transition-smooth);
+    text-decoration: none;
+}
+.pub-nav-link:hover {
+    color: var(--text);
+}
+.pub-nav-cta {
+    padding: 0.55rem 1.25rem;
+    background: linear-gradient(135deg, var(--primary), var(--primary-light));
+    color: var(--text) !important;
+    font-weight: 600;
+    font-size: 0.85rem;
+    border-radius: var(--radius-md);
+    text-decoration: none;
+    transition: all var(--transition-smooth);
+}
+.pub-nav-cta:hover {
+    transform: translateY(-2px);
+    box-shadow: var(--glow-primary);
+}
+.pub-nav-logout {
+    padding: 0.55rem 1rem;
+    background: transparent;
+    border: 1px solid var(--border);
+    border-radius: var(--radius-md);
+    color: var(--muted);
+    font-size: 0.85rem;
+    font-weight: 500;
+    cursor: pointer;
+    font-family: inherit;
+    transition: all var(--transition-smooth);
+}
+.pub-nav-logout:hover {
+    color: var(--danger);
+    border-color: rgba(180,106,106,0.4);
+}
+@media (max-width: 768px) {
+    .pub-nav-links .pub-nav-link:not(:first-child):not(:last-child) { display: none; }
+}
