@@ -1,21 +1,221 @@
 {
-  "_vendor-l0sNRNKZ.js": {
-    "file": "assets/vendor-l0sNRNKZ.js",
-    "name": "vendor"
-  },
-  "resources/css/app.css": {
-    "file": "assets/app-Y6kNBT_c.css",
-    "src": "resources/css/app.css",
+  "resources/css/admin/activity-logs.css": {
+    "file": "assets/activity-logs-CN90leQP.css",
+    "src": "resources/css/admin/activity-logs.css",
     "isEntry": true,
-    "name": "app",
+    "name": "activity-logs",
     "names": [
-      "app.css"
+      "activity-logs.css"
     ]
   },
-  "resources/js/app.js": {
-    "file": "assets/app-BpY5gpO0.js",
-    "name": "app",
-    "src": "resources/js/app.js",
+  "resources/css/admin/admin-dashboard.css": {
+    "file": "assets/admin-dashboard-BKzyeYGX.css",
+    "src": "resources/css/admin/admin-dashboard.css",
+    "isEntry": true,
+    "name": "admin-dashboard",
+    "names": [
+      "admin-dashboard.css"
+    ]
+  },
+  "resources/css/admin/verification.css": {
+    "file": "assets/verification-DoB8TU5X.css",
+    "src": "resources/css/admin/verification.css",
+    "isEntry": true,
+    "name": "verification",
+    "names": [
+      "verification.css"
+    ]
+  },
+  "resources/css/auth/login.css": {
+    "file": "assets/login-C9Qw8h40.css",
+    "src": "resources/css/auth/login.css",
+    "isEntry": true,
+    "name": "login",
+    "names": [
+      "login.css"
+    ]
+  },
+  "resources/css/components/dashboard-shared.css": {
+    "file": "assets/dashboard-shared-CNDMq0AZ.css",
+    "src": "resources/css/components/dashboard-shared.css",
+    "isEntry": true,
+    "name": "dashboard-shared",
+    "names": [
+      "dashboard-shared.css"
+    ]
+  },
+  "resources/css/components/footer.css": {
+    "file": "assets/footer-Bc8_MyTR.css",
+    "src": "resources/css/components/footer.css",
+    "isEntry": true,
+    "name": "footer",
+    "names": [
+      "footer.css"
+    ]
+  },
+  "resources/css/components/forms-extended.css": {
+    "file": "assets/forms-extended-COe1ngLL.css",
+    "src": "resources/css/components/forms-extended.css",
+    "isEntry": true,
+    "name": "forms-extended",
+    "names": [
+      "forms-extended.css"
+    ]
+  },
+  "resources/css/components/navbar.css": {
+    "file": "assets/navbar-Dv7nVtb8.css",
+    "src": "resources/css/components/navbar.css",
+    "isEntry": true,
+    "name": "navbar",
+    "names": [
+      "navbar.css"
+    ]
+  },
+  "resources/css/components/pitch-buttons.css": {
+    "file": "assets/pitch-buttons-BKM2KqxC.css",
+    "src": "resources/css/components/pitch-buttons.css",
+    "isEntry": true,
+    "name": "pitch-buttons",
+    "names": [
+      "pitch-buttons.css"
+    ]
+  },
+  "resources/css/components/public-shared.css": {
+    "file": "assets/public-shared-BwySUHhT.css",
+    "src": "resources/css/components/public-shared.css",
+    "isEntry": true,
+    "name": "public-shared",
+    "names": [
+      "public-shared.css"
+    ]
+  },
+  "resources/css/conversations/chat.css": {
+    "file": "assets/chat-Bi4fhwHz.css",
+    "src": "resources/css/conversations/chat.css",
+    "isEntry": true,
+    "name": "chat",
+    "names": [
+      "chat.css"
+    ]
+  },
+  "resources/css/conversations/conversations.css": {
+    "file": "assets/conversations-G1JVlY1F.css",
+    "src": "resources/css/conversations/conversations.css",
+    "isEntry": true,
+    "name": "conversations",
+    "names": [
+      "conversations.css"
+    ]
+  },
+  "resources/css/dashboard/dashboard-partials.css": {
+    "file": "assets/dashboard-partials-5xwi6tAq.css",
+    "src": "resources/css/dashboard/dashboard-partials.css",
+    "isEntry": true,
+    "name": "dashboard-partials",
+    "names": [
+      "dashboard-partials.css"
+    ]
+  },
+  "resources/css/documents/documents.css": {
+    "file": "assets/documents-BzJBzZpQ.css",
+    "src": "resources/css/documents/documents.css",
+    "isEntry": true,
+    "name": "documents",
+    "names": [
+      "documents.css"
+    ]
+  },
+  "resources/css/global/theme.css": {
+    "file": "assets/theme-CSr_n6C-.css",
+    "src": "resources/css/global/theme.css",
+    "isEntry": true,
+    "name": "theme",
+    "names": [
+      "theme.css"
+    ]
+  },
+  "resources/css/investments/investments.css": {
+    "file": "assets/investments-DqJcbVKJ.css",
+    "src": "resources/css/investments/investments.css",
+    "isEntry": true,
+    "name": "investments",
+    "names": [
+      "investments.css"
+    ]
+  },
+  "resources/css/meetings/meetings.css": {
+    "file": "assets/meetings-CLATxlMA.css",
+    "src": "resources/css/meetings/meetings.css",
+    "isEntry": true,
+    "name": "meetings",
+    "names": [
+      "meetings.css"
+    ]
+  },
+  "resources/css/pitch_decks/pitch-decks.css": {
+    "file": "assets/pitch-decks-6EAmxZG2.css",
+    "src": "resources/css/pitch_decks/pitch-decks.css",
+    "isEntry": true,
+    "name": "pitch-decks",
+    "names": [
+      "pitch-decks.css"
+    ]
+  },
+  "resources/css/public/landing.css": {
+    "file": "assets/landing-CXQFVLUG.css",
+    "src": "resources/css/public/landing.css",
+    "isEntry": true,
+    "name": "landing",
+    "names": [
+      "landing.css"
+    ]
+  },
+  "resources/css/startups/discovery.css": {
+    "file": "assets/discovery-oZyvHTUG.css",
+    "src": "resources/css/startups/discovery.css",
+    "isEntry": true,
+    "name": "discovery",
+    "names": [
+      "discovery.css"
+    ]
+  },
+  "resources/css/startups/show.css": {
+    "file": "assets/show-I3_RdCc8.css",
+    "src": "resources/css/startups/show.css",
+    "isEntry": true,
+    "name": "show",
+    "names": [
+      "show.css"
+    ]
+  },
+  "resources/css/startups/startup-cards.css": {
+    "file": "assets/startup-cards-DpRQQd79.css",
+    "src": "resources/css/startups/startup-cards.css",
+    "isEntry": true,
+    "name": "startup-cards",
+    "names": [
+      "startup-cards.css"
+    ]
+  },
+  "resources/css/users/users-list.css": {
+    "file": "assets/users-list-BTTA4ZWe.css",
+    "src": "resources/css/users/users-list.css",
+    "isEntry": true,
+    "name": "users-list",
+    "names": [
+      "users-list.css"
+    ]
+  },
+  "resources/js/dashboard.js": {
+    "file": "assets/dashboard-Cp5tsAz8.js",
+    "name": "dashboard",
+    "src": "resources/js/dashboard.js",
+    "isEntry": true
+  },
+  "resources/js/invesmal-ui.js": {
+    "file": "assets/invesmal-ui-CvVchjby.js",
+    "name": "invesmal-ui",
+    "src": "resources/js/invesmal-ui.js",
     "isEntry": true
   }
 }
